@@ -314,7 +314,7 @@ padding-bottom: 9px;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--black);
-  /* padding-bottom: 50px; */
+  padding-bottom: 50px;
 }
 
 .main-site-description > h3 {
@@ -396,9 +396,7 @@ text-align: center;
   margin: 0px;
   background-color: var(--white);
 }
-.main-imgs-li {
-  padding-top: 50px;
-}
+
 .third-section-bcgd{
   background-color: var(--btn-background);
 }
