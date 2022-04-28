@@ -11,6 +11,7 @@
   --header-border: #ECECEC;
   --svg-color:#afb1b8;
   --gradient:rgba(47, 48, 58, 0.4);
+  --title-gradient:linear-gradient(90deg, #2196f3, #ffffff);
 
 }
 
@@ -231,8 +232,28 @@ padding-bottom: 9px;
   height: 24px;
   margin-left: 24px;
 }
+.grad-move{
+  background-image: var(--title-gradient);
+  background-clip: text;
+  color: transparent;
+  /* display: inline-block; */
+  background-size: 500%;
+  transition: background-position 1s;
+  animation: bg-animation 10s infinite;
+}
+@keyframes bg-animation {
+  0% {
+    background-position: left
+  }
 
+  50% {
+    background-position: right
+  }
 
+  100% {
+    background-position: left
+  }
+}
 /* =============================================== BUTTONS ================================================== */
 .btn-primary,
 .submit-btn,
@@ -494,7 +515,26 @@ text-align: center;
   border-bottom: 4px solid var(--blue);
   border-radius: 2px;
   transform: translateY(35px);
+  
 }
+
+.active-choose::after {
+  content: "";
+  display: block;
+  border-bottom: 4px solid transparent;
+  border-radius: 2px;
+  transform:scaleX(0) translateY(35px);
+  transform-origin: right;
+  transition: transform 150ms ease-in;
+}
+
+.active-choose:hover::after {
+  content: "";
+  display: block;
+  border-bottom: 4px solid var(--blue);
+  border-radius: 2px;
+  transform: scaleX(1) translateY(35px);
+  transform-origin: left;}
 
 /* ============================================== PORTFOLIO =================================================== */
 .portfolio-title {
