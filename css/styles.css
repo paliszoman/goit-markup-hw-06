@@ -226,6 +226,7 @@ padding-bottom: 9px;
   color: var(--grey);
   padding: 16px 15px;
   margin-right: 12px;
+  color: var(--white);
 }
 .footer-form-svg{
   width: 24px;
